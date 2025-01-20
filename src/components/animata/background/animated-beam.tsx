@@ -13,7 +13,7 @@ function Beam({ index }: { index: number }) {
       style={{
         width: "6px",
         transform: "translateY(-20%)",
-        "--delay": `${index * 0.5}s`,
+        ["--delay" as string]: `${index * 0.5}s`,
       }}
     >
       <div
@@ -75,7 +75,10 @@ function Background() {
         className="absolute inset-0 top-1/2 h-full w-full rounded-full opacity-40"
       />
       {Array.from({ length: count }, (_, i) => (
-        <div key={i} className="relative h-full w-px rotate-12 bg-gray-100 bg-opacity-10">
+        <div
+          key={i}
+          className="relative h-full w-px rotate-12 bg-gray-100 bg-opacity-10"
+        >
           {(1 + i) % 4 === 0 && <Beam index={i + 1} />}
         </div>
       ))}
@@ -91,7 +94,9 @@ export default function AnimatedBeam({
   className?: string;
 }) {
   return (
-    <div className={cn("storybook-fix relative w-full overflow-hidden", className)}>
+    <div
+      className={cn("storybook-fix relative w-full overflow-hidden", className)}
+    >
       <Background />
       <div className="relative h-full w-full">{children}</div>
     </div>
