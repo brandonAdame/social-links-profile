@@ -87,7 +87,7 @@ export default function RippleButton({
   return (
     <button
       ref={buttonRef}
-      className="font-jost duration-[600ms] relative flex items-center justify-center overflow-hidden rounded-full bg-[#cbfe7e] p-2 text-[1.2rem] font-medium text-[#0e352e] transition hover:text-white"
+      className="font-jost duration-[600ms] relative flex items-center justify-center overflow-hidden rounded-full bg-[#cbfe7e] p-2 text-[1.2rem] font-medium text-[#0e352e] transition hover:text-white hover:stroke-[#cbfe7e]"
       onMouseEnter={(e) => {
         if (e.target === e.currentTarget) {
           createRipple(e);

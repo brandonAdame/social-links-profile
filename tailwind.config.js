@@ -27,10 +27,15 @@ export default {
           "85%": { transform: "translateY(-412%)" },
           "100%": { transform: "translateY(-400%)" },
         },
+        trail: {
+          "0%": { "--angle": "0deg" },
+          "100%": { "--angle": "360deg" },
+        },
       },
       animation: {
         "flip-words": "flip-words 8s infinite",
         meteor: "meteor var(--duration) var(--delay) ease-in-out infinite",
+        trail: "trail var(--duration) linear infinite",
       },
     },
   },
