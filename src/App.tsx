@@ -1,6 +1,6 @@
 import "./App.css";
 import croppedPhoto from "./assets/cropped-photo.jpeg";
-import InteractiveGrid from "./components/animata/background/interactive-grid";
+import AnimatedBeam from "./components/animata/background/animated-beam";
 import RippleButton from "./components/animata/button/ripple-button";
 import TextFlip from "./components/animata/text/text-flip";
 
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       {/* Main background */}
-      <InteractiveGrid>
+      <AnimatedBeam>
         <div className="flex h-screen items-center justify-center font-inter">
           {/* Card */}
           <div className="bg-vite-bg rounded-lg p-6">
@@ -56,7 +56,7 @@ function App() {
             </div>
           </div>
         </div>
-      </InteractiveGrid>
+      </AnimatedBeam>
     </>
   );
 }

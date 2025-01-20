@@ -13,6 +13,10 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       keyframes: {
+        meteor: {
+          "0%": { transform: "translateY(-20%) translateX(-50%)" },
+          "100%": { transform: "translateY(300%) translateX(-50%)" },
+        },
         "flip-words": {
           "10%": { transform: "translateY(-112%)" },
           "25%": { transform: "translateY(-100%)" },
@@ -26,6 +30,7 @@ export default {
       },
       animation: {
         "flip-words": "flip-words 8s infinite",
+        meteor: "meteor var(--duration) var(--delay) ease-in-out infinite",
       },
     },
   },
